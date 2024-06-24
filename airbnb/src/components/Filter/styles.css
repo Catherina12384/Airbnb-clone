@@ -1,0 +1,136 @@
+/* Container for filter navigation */
+.filter-div {
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  scrollbar-width: none; 
+  -ms-overflow-style: unset;
+  position: sticky; 
+  height: 5rem;
+  background-color: var(--white);
+}
+
+.bottom-line{
+  display: none;
+}
+
+/* Individual filter box */
+.links-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 2rem;
+  opacity: 0.5;
+  border-bottom: 1px solid var(--white);
+  min-width: 85px;
+  flex: 0 0 auto;
+}
+
+/* Hover and selected state for filter box */
+.links-box:hover,
+.selected-box {
+  opacity: 1;
+  border-bottom: 1px solid var(--black);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+/* Image inside filter box */
+.links-img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+/* Label inside filter box */
+.links-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--font-grey);
+}
+
+/* Selected label inside filter box */
+.selected-label {
+  color: var(--black);
+}
+
+/* Arrow button styles */
+.arrow-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Icon inside arrow button */
+.arrow-button .MuiSvgIcon-root {
+  font-size: 1rem; /* Adjust icon size as needed */
+}
+
+/* Disabled state for arrow button */
+.arrow-button:disabled {
+  cursor: not-allowed;
+}
+
+/* Tablet and desktop */
+@media only screen and (max-width: 1200px) {
+  .filter-div {
+    padding: 0.5rem 2rem;
+  }
+  .links-box {
+    margin-right: 1.5rem;
+  }
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 850px) {
+  .filter-div {
+    padding: 0.5rem;
+    padding-top: 1.5rem;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 5.5rem;
+  }
+  .links-box {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  .bottom-line{
+    display: block;
+    border-bottom: 1px solid #ddd;
+  }
+}
+
+/* Small mobile */
+@media only screen and (max-width: 500px) {
+  .filter-div {
+    padding: 0.5rem;
+  }
+  .links-box {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .links-img {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+  .links-label {
+    font-size: 0.6rem;
+  }
+  .bottom-line{
+    display: block;
+    border-bottom: 1px solid #ddd;
+  }
+}

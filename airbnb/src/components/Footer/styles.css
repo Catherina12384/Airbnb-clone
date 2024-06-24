@@ -1,0 +1,90 @@
+/* styles.css */
+
+
+.footer {
+    background-color: #f7f7f7;
+    border-top: 1px solid #cfcccc;
+    display: flex;
+    justify-content: space-between; /* Added to evenly distribute content */
+    align-items: center; /* Added for vertical alignment */
+    flex-wrap: nowrap;
+    height: 3rem; /* Set a fixed height */
+    position: fixed; /* Fixed positioning */
+    bottom: 0; /* Stick to the bottom of the viewport */
+    width: 95%; /* Occupy full width */
+    padding: 0 3rem;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+
+.globe-icon{
+    color: #5d5b5b;
+    font-size: large;
+    font-weight: 600;
+}
+
+.language-selector .language{
+    padding-left: 0.5rem;
+    color: var(--black);
+    font-weight: 600;
+}
+
+.footer-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between; /* Adjust spacing between elements */
+    align-items: center; /* Vertical alignment */
+}
+
+.footer-content p {
+    margin-bottom: 10px;
+    color: #5d5b5b;
+    display: flex;
+    justify-content: space-between; /* Allow paragraph to take remaining space */
+    gap: 1rem;
+}
+
+
+.footer-content a {
+    text-decoration: none;
+    color: #5d5b5b;
+    padding: 1rem 0;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+    transition: all 0.2s;
+}
+
+.footer-links {
+    display: flex; /* Ensures elements within these containers are in a row */
+    align-items: center; /* Vertical alignment */
+    gap: 1.8rem;
+}
+
+.support-selector {
+    cursor: pointer;
+    margin-top: -0.2rem;
+}
+
+.support-selector .arrow-icon {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.support-selector:hover {
+    text-decoration: underline;
+}
+
+.support-resources {
+    display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+    .footer{
+        display: none;
+    }
+}
+
